@@ -10,6 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
       - name: Checkout Code
@@ -34,10 +35,11 @@ jobs:
       - name: Build Web Application
         run: npm run build
 
-      - name: Regenerate Gradle Wrapper
+      - name: Restore Clean Gradle Wrapper Jar
         run: |
           cd android
-          gradle wrapper
+          rm -f gradle/wrapper/gradle-wrapper.jar
+          curl -Lo gradle/wrapper/gradle-wrapper.jar https://github.com/gradle/gradle/raw/v8.14.3/gradle/wrapper/gradle-wrapper.jar
           chmod +x gradlew
 
       - name: Sync Capacitor Android

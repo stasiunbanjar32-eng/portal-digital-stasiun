@@ -406,7 +406,7 @@ export default function App() {
             <div className="flex flex-col">
               <span className="text-[10px] font-black uppercase tracking-[0.2em] text-orange-500">Call Center</span>
               <span className="text-xs font-bold text-white tracking-tight">0822 1997 3238</span>
-              <span className="text-[10px] text-white/40 font-medium">stasiunbanjar@gmail.com</span>
+              <span className="text-[10px] text-white/40 font-medium">stasiunbanjar32@gmail.com</span>
             </div>
           </div>
         </div>
